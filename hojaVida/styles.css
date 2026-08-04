@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f6f8;
+    color: #333333;
+    padding: 20px;
+}
+
+/* Centrado del contenido */
+.cv-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+}
+
+/* Colores e imagen de perfil */
+h1,
+h2,
+h3,
+strong {
+    color: #2c3e50;
+}
+
+h3 {
+    border-bottom: 2px solid #3498db;
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+    object-fit: cover;
+}
+
+a {
+    color: #2980b9;
+}
