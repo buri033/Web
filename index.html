@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aura Café - Café de especialidad de origen único, métodos de extracción artesanal y guías de preparación profesional.">
+  <meta name="keywords" content="café de especialidad, V60, Chemex, Aeropress, granos de origen, barismo, tueste artesanal">
+  <title>Aura Café | Café de Especialidad & Métodos de Extracción</title>
+  
+  <!-- Typography from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- External Vanilla CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER & NAVIGATION -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="#inicio" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
+        <span class="logo-text">AURA <span class="logo-accent">CAFÉ</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li class="nav-item"><a href="#acerca" class="nav-link">Acerca de</a></li>
+          <li class="nav-item"><a href="#cafes" class="nav-link">Nuestros Cafés</a></li>
+          <li class="nav-item"><a href="#metodos" class="nav-link">Métodos</a></li>
+          <li class="nav-item"><a href="#preparacion" class="nav-link">Preparación</a></li>
+          <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#preparacion" class="btn btn-outline btn-sm header-btn">
+          <i class="fa-solid fa-calculator"></i> Calculadora
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main>
+
+    <!-- SECTION 1: HERO (INICIO) -->
+    <section class="hero-section" id="inicio">
+      <div class="hero-backdrop">
+        <img src="images/hero.png" alt="Preparación de café de especialidad pour-over V60" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge badge-accent">
+            <i class="fa-solid fa-certificate"></i> Tueste Fresco Artesanal & Score SCA 86+
+          </span>
+          <h1 class="hero-title">El Arte Supremo del <br><span class="text-highlight">Café de Especialidad</span></h1>
+          <p class="hero-description">
+            Descubre granos de origen único seleccionados de micro-lotes en Colombia, Etiopía, Panamá y Kenia.
+            Perfecciona tu ritual diario con nuestras guías de extracción y preparación experta.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#cafes" class="btn btn-primary">
+              <i class="fa-solid fa-seedling"></i> Explorar Granos
+            </a>
+            <a href="#metodos" class="btn btn-secondary">
+              <i class="fa-solid fa-flask"></i> Ver Métodos
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Granos Arábica</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">+86</span>
+              <span class="stat-label">Puntaje SCA</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">24h</span>
+              <span class="stat-label">Tueste Bajo Pedido</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ACERCA DE (NUESTRA FILOSOFÍA) -->
+    <section class="section about-section" id="acerca">
+      <div class="container">
+        <div class="grid grid-2-cols about-grid">
+          
+          <figure class="about-image-wrapper">
+            <img src="images/nosotros.png" alt="Laboratorio de tueste y barismo en Aura Café" class="about-img">
+            <figcaption class="about-badge">
+              <i class="fa-solid fa-award"></i>
+              <span>Comercio Directo con Caficultores</span>
+            </figcaption>
+          </figure>
+
+          <article class="about-content">
+            <span class="section-subtitle">Nuestra Filosofía</span>
+            <h2 class="section-title">Más que una bebida, una <span class="text-accent">experiencia sensorial</span></h2>
+            
+            <p class="lead-text">
+              En <strong>Aura Café</strong> entendemos el café de especialidad como la unión perfecta entre agronomía ética, arte en el tueste y precisión barista.
+            </p>
+
+            <p>
+              A diferencia del café comercial masivo, nuestros lotes son cultivados a altas altitudes (más de 1,600 msnm), cosechados manualmente a su justa maduración y tostados en pequeñas tandas para preservar y resaltar sus perfiles naturales de acidez, dulzor y cuerpo.
+            </p>
+
+            <div class="pillars-grid">
+              <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                <div class="pillar-info">
+                  <h3>Trazabilidad Total</h3>
+                  <p>Conocemos la finca, el productor, la variedad y la altitud exacta de cada grano.</p>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-fire-burner"></i></div>
+                <div class="pillar-info">
+                  <h3>Perfiles de Tueste Únicos</h3>
+                  <p>Tuestes medios y claros diseñados para destacar notas florales, frutales y achocolatadas.</p>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-handshake"></i></div>
+                <div class="pillar-info">
+                  <h3>Precios Justos</h3>
+                  <p>Pagamos hasta 3x el valor del mercado internacional directamente a las familias caficultoras.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: NUESTROS CAFÉS (CATÁLOGO DE ESPECIALIDAD) -->
+    <section class="section coffees-section bg-alt" id="cafes">
+      <div class="container">
+        
+        <header class="section-header text-center">
+          <span class="section-subtitle">Catálogo Seleccionado</span>
+          <h2 class="section-title">Nuestros Cafés de <span class="text-accent">Origen Único</span></h2>
+          <p class="section-description">
+            Explora nuestros micro-lotes calificados por catadores certificados Q-Grader. Cada bolsa incluye fecha de tueste y ficha técnica completa.
+          </p>
+        </header>
+
+        <!-- Filter Controls -->
+        <div class="filter-controls">
+          <button class="filter-btn active" data-filter="all">Todos los Orígenes</button>
+          <button class="filter-btn" data-filter="america">América Latina</button>
+          <button class="filter-btn" data-filter="africa">África</button>
+          <button class="filter-btn" data-filter="exotic">Lotes Exóticos</button>
+        </div>
+
+        <!-- Coffee Cards Grid -->
+        <div class="grid grid-3-cols coffee-grid">
+
+          <!-- Card 1 -->
+          <article class="coffee-card" data-category="exotic america">
+            <div class="coffee-card-header">
+              <span class="coffee-score">SCA 92.5</span>
+              <span class="coffee-process">Proceso Natural</span>
+            </div>
+            <div class="coffee-card-body">
+              <div class="coffee-origin">
+                <i class="fa-solid fa-location-dot"></i> Boquete, Panamá
+              </div>
+              <h3 class="coffee-title">Geisha Hacienda La Esmeralda</h3>
+              <p class="coffee-variety">Variedad: Geisha Pure • Altitud: 1,850 msnm</p>
+
+              <div class="flavor-notes">
+                <span class="note-tag"><i class="fa-solid fa-leaf"></i> Jazmín</span>
+                <span class="note-tag"><i class="fa-solid fa-apple-whole"></i> Melocotón</span>
+                <span class="note-tag"><i class="fa-solid fa-lemon"></i> Bergamota</span>
+              </div>
+
+              <p class="coffee-desc">
+                Considerado uno de los mejores cafés del mundo. Taza ultra limpia, notas florales intensas y acidez sedosa reminiscentes del té Earl Grey.
+              </p>
+
+              <div class="coffee-card-footer">
+                <div class="coffee-price">$28.00 <small>/ 250g</small></div>
+                <button class="btn btn-outline btn-sm coffee-action-btn" onclick="openCoffeeModal('Geisha Panamá', '$28.00')">
+                  Ver Ficha
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="coffee-card" data-category="america">
+            <div class="coffee-card-header">
+              <span class="coffee-score">SCA 89.0</span>
+              <span class="coffee-process">Lavado Anaeróbico</span>
+            </div>
+            <div class="coffee-card-body">
+              <div class="coffee-origin">
+                <i class="fa-solid fa-location-dot"></i> Huila, Colombia
+              </div>
+              <h3 class="coffee-title">Bourbon Rosa El Paraíso</h3>
+              <p class="coffee-variety">Variedad: Bourbon Rosado • Altitud: 1,950 msnm</p>
+
+              <div class="flavor-notes">
+                <span class="note-tag"><i class="fa-solid fa-wine-bottle"></i> Frutos Rojos</span>
+                <span class="note-tag"><i class="fa-solid fa-cookie"></i> Caramelo</span>
+                <span class="note-tag"><i class="fa-solid fa-vial"></i> Acidez Tartárica</span>
+              </div>
+
+              <p class="coffee-desc">
+                Fermentación controlada por 48 horas. Perfil efervescente con dulzor a mora silvestre, vainilla y final prolongado a chocolate blanco.
+              </p>
+
+              <div class="coffee-card-footer">
+                <div class="coffee-price">$21.50 <small>/ 250g</small></div>
+                <button class="btn btn-outline btn-sm coffee-action-btn" onclick="openCoffeeModal('Bourbon Rosa Colombia', '$21.50')">
+                  Ver Ficha
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="coffee-card" data-category="africa">
+            <div class="coffee-card-header">
+              <span class="coffee-score">SCA 89.5</span>
+              <span class="coffee-process">Natural Africano</span>
+            </div>
+            <div class="coffee-card-body">
+              <div class="coffee-origin">
+                <i class="fa-solid fa-location-dot"></i> Yirgacheffe, Etiopía
+              </div>
+              <h3 class="coffee-title">Etiopía Worka Sakaro</h3>
+              <p class="coffee-variety">Variedad: Heirloom Nativo • Altitud: 2,100 msnm</p>
+
+              <div class="flavor-notes">
+                <span class="note-tag"><i class="fa-solid fa-fan"></i> Azahar</span>
+                <span class="note-tag"><i class="fa-solid fa-bowl-food"></i> Arándanos</span>
+                <span class="note-tag"><i class="fa-solid fa-jar"></i> Miel Silvestre</span>
+              </div>
+
+              <p class="coffee-desc">
+                Secado en camas africanas al sol. Explosión frutal distintiva de la cuna del café, cuerpo jugoso y aroma embriagador.
+              </p>
+
+              <div class="coffee-card-footer">
+                <div class="coffee-price">$22.00 <small>/ 250g</small></div>
+                <button class="btn btn-outline btn-sm coffee-action-btn" onclick="openCoffeeModal('Etiopía Yirgacheffe', '$22.00')">
+                  Ver Ficha
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="coffee-card" data-category="africa">
+            <div class="coffee-card-header">
+              <span class="coffee-score">SCA 88.0</span>
+              <span class="coffee-process">Lavado Doble</span>
+            </div>
+            <div class="coffee-card-body">
+              <div class="coffee-origin">
+                <i class="fa-solid fa-location-dot"></i> Nyeri, Kenia
+              </div>
+              <h3 class="coffee-title">Kenya Nyeri Kirinyaga AA</h3>
+              <p class="coffee-variety">Variedad: SL28 & SL34 • Altitud: 1,780 msnm</p>
+
+              <div class="flavor-notes">
+                <span class="note-tag"><i class="fa-solid fa-seedling"></i> Grosella Negra</span>
+                <span class="note-tag"><i class="fa-solid fa-lemon"></i> Pomelo</span>
+                <span class="note-tag"><i class="fa-solid fa-droplet"></i> Acidez Fosfórica</span>
+              </div>
+
+              <p class="coffee-desc">
+                Cuerpo vinoso y brillante. Proceso de lavado doble keniano tradicional que otorga máxima intensidad y claridad cítrica.
+              </p>
+
+              <div class="coffee-card-footer">
+                <div class="coffee-price">$24.00 <small>/ 250g</small></div>
+                <button class="btn btn-outline btn-sm coffee-action-btn" onclick="openCoffeeModal('Kenya Nyeri AA', '$24.00')">
+                  Ver Ficha
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="coffee-card" data-category="america">
+            <div class="coffee-card-header">
+              <span class="coffee-score">SCA 87.5</span>
+              <span class="coffee-process">Honey Amarillo</span>
+            </div>
+            <div class="coffee-card-body">
+              <div class="coffee-origin">
+                <i class="fa-solid fa-location-dot"></i> Tarrazú, Costa Rica
+              </div>
+              <h3 class="coffee-title">Costa Rica Don Mayo Honey</h3>
+              <p class="coffee-variety">Variedad: Caturra & Catuai • Altitud: 1,700 msnm</p>
+
+              <div class="flavor-notes">
+                <span class="note-tag"><i class="fa-solid fa-apple-whole"></i> Manzana Verde</span>
+                <span class="note-tag"><i class="fa-solid fa-cubes"></i> Panela</span>
+                <span class="note-tag"><i class="fa-solid fa-mortar-pestle"></i> Almendras</span>
+              </div>
+
+              <p class="coffee-desc">
+                Despulpado conservando parte del mucílago. Equilibrio perfecto entre acidez crujiente de manzana y dulzor meloso natural.
+              </p>
+
+              <div class="coffee-card-footer">
+                <div class="coffee-price">$19.50 <small>/ 250g</small></div>
+                <button class="btn btn-outline btn-sm coffee-action-btn" onclick="openCoffeeModal('Costa Rica Honey', '$19.50')">
+                  Ver Ficha
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="coffee-card" data-category="exotic america">
+            <div class="coffee-card-header">
+              <span class="coffee-score">SCA 90.0</span>
+              <span class="coffee-process">Maceración Carbónica</span>
+            </div>
+            <div class="coffee-card-body">
+              <div class="coffee-origin">
+                <i class="fa-solid fa-location-dot"></i> Huehuetenango, Guatemala
+              </div>
+              <h3 class="coffee-title">Guatemala Pacamara Reserva</h3>
+              <p class="coffee-variety">Variedad: Pacamara Gigante • Altitud: 1,900 msnm</p>
+
+              <div class="flavor-notes">
+                <span class="note-tag"><i class="fa-solid fa-cookie-bite"></i> Chocolate 70%</span>
+                <span class="note-tag"><i class="fa-solid fa-pepper-hot"></i> Canela</span>
+                <span class="note-tag"><i class="fa-solid fa-pepper-hot"></i> Cereza Negra</span>
+              </div>
+
+              <p class="coffee-desc">
+                Granos de gran tamaño con fermentación en ambiente rico en CO2. Taza compleja con especias dulces y notas a cacao fino de aroma.
+              </p>
+
+              <div class="coffee-card-footer">
+                <div class="coffee-price">$26.00 <small>/ 250g</small></div>
+                <button class="btn btn-outline btn-sm coffee-action-btn" onclick="openCoffeeModal('Guatemala Pacamara', '$26.00')">
+                  Ver Ficha
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: MÉTODOS DE EXTRACCIÓN -->
+    <section class="section methods-section" id="metodos">
+      <div class="container">
+        
+        <header class="section-header text-center">
+          <span class="section-subtitle">Ciencia & Arte Barista</span>
+          <h2 class="section-title">Métodos de <span class="text-accent">Extracción</span></h2>
+          <p class="section-description">
+            Cada método resalta atributos específicos del grano. Aprende cómo la molienda, la temperatura del agua y el tiempo transforman tu taza.
+          </p>
+        </header>
+
+        <div class="methods-layout">
+          <div class="methods-image-banner">
+            <img src="images/metodos.png" alt="Equipamiento de extracción de café de especialidad" class="methods-banner-img">
+          </div>
+
+          <div class="grid grid-3-cols methods-grid">
+
+            <!-- Method 1: V60 -->
+            <article class="method-card">
+              <div class="method-icon-box">
+                <i class="fa-solid fa-filter"></i>
+              </div>
+              <h3 class="method-title">Hario V60</h3>
+              <span class="method-tag">Goteo / Cono de Papel</span>
+              <p class="method-desc">
+                Diseño cónico a 60° con estrías en espiral. Otorga una taza limpia, de cuerpo ligero y acidez muy definida.
+              </p>
+
+              <ul class="method-specs">
+                <li><i class="fa-solid fa-sliders"></i> <strong>Molienda:</strong> Medio - Fina</li>
+                <li><i class="fa-solid fa-stopwatch"></i> <strong>Tiempo:</strong> 2:30 – 3:00 min</li>
+                <li><i class="fa-solid fa-scale-balanced"></i> <strong>Ratio Ideal:</strong> 1:15 a 1:16</li>
+                <li><i class="fa-solid fa-temperature-three-quarters"></i> <strong>Agua:</strong> 92°C - 94°C</li>
+              </ul>
+            </article>
+
+            <!-- Method 2: Chemex -->
+            <article class="method-card">
+              <div class="method-icon-box">
+                <i class="fa-solid fa-wine-glass-empty"></i>
+              </div>
+              <h3 class="method-title">Chemex</h3>
+              <span class="method-tag">Filtro de Papel Grueso</span>
+              <p class="method-desc">
+                Jarra icónica de borosilicato. Sus filtros especiales retienen la mayor cantidad de aceites, produciendo la taza más cristalina.
+              </p>
+
+              <ul class="method-specs">
+                <li><i class="fa-solid fa-sliders"></i> <strong>Molienda:</strong> Media (Sal Marina)</li>
+                <li><i class="fa-solid fa-stopwatch"></i> <strong>Tiempo:</strong> 3:30 – 4:30 min</li>
+                <li><i class="fa-solid fa-scale-balanced"></i> <strong>Ratio Ideal:</strong> 1:16</li>
+                <li><i class="fa-solid fa-temperature-three-quarters"></i> <strong>Agua:</strong> 93°C - 95°C</li>
+              </ul>
+            </article>
+
+            <!-- Method 3: AeroPress -->
+            <article class="method-card">
+              <div class="method-icon-box">
+                <i class="fa-solid fa-vial-circle-check"></i>
+              </div>
+              <h3 class="method-title">AeroPress</h3>
+              <span class="method-tag">Presión de Émbolo</span>
+              <p class="method-desc">
+                Inventiva rápida e indestructible. Permite modificar tiempo de inmersión y presión para obtener tazas versátiles e intensas.
+              </p>
+
+              <ul class="method-specs">
+                <li><i class="fa-solid fa-sliders"></i> <strong>Molienda:</strong> Fina - Media</li>
+                <li><i class="fa-solid fa-stopwatch"></i> <strong>Tiempo:</strong> 1:30 – 2:00 min</li>
+                <li><i class="fa-solid fa-scale-balanced"></i> <strong>Ratio Ideal:</strong> 1:14 a 1:15</li>
+                <li><i class="fa-solid fa-temperature-three-quarters"></i> <strong>Agua:</strong> 88°C - 92°C</li>
+              </ul>
+            </article>
+
+            <!-- Method 4: Prensa Francesa -->
+            <article class="method-card">
+              <div class="method-icon-box">
+                <i class="fa-solid fa-glass-water"></i>
+              </div>
+              <h3 class="method-title">Prensa Francesa</h3>
+              <span class="method-tag">Inmersión Completa</span>
+              <p class="method-desc">
+                El café reposa directamente en agua antes de filtrar mediante una malla metálica. Conserva aceites y un cuerpo untuoso deslumbrante.
+              </p>
+
+              <ul class="method-specs">
+                <li><i class="fa-solid fa-sliders"></i> <strong>Molienda:</strong> Gruesa</li>
+                <li><i class="fa-solid fa-stopwatch"></i> <strong>Tiempo:</strong> 4:00 min</li>
+                <li><i class="fa-solid fa-scale-balanced"></i> <strong>Ratio Ideal:</strong> 1:12 a 1:15</li>
+                <li><i class="fa-solid fa-temperature-three-quarters"></i> <strong>Agua:</strong> 92°C - 94°C</li>
+              </ul>
+            </article>
+
+            <!-- Method 5: Espresso -->
+            <article class="method-card">
+              <div class="method-icon-box">
+                <i class="fa-solid fa-mug-hot"></i>
+              </div>
+              <h3 class="method-title">Espresso</h3>
+              <span class="method-tag">Alta Presión (9 Bar)</span>
+              <p class="method-desc">
+                Extracción concentrada en 30 segundos. Produce una bebida densa con crema avellanada, alta concentración y retrogusto persistente.
+              </p>
+
+              <ul class="method-specs">
+                <li><i class="fa-solid fa-sliders"></i> <strong>Molienda:</strong> Muy Fina</li>
+                <li><i class="fa-solid fa-stopwatch"></i> <strong>Tiempo:</strong> 25 – 30 seg</li>
+                <li><i class="fa-solid fa-scale-balanced"></i> <strong>Ratio Ideal:</strong> 1:2 (18g in / 36g out)</li>
+                <li><i class="fa-solid fa-temperature-three-quarters"></i> <strong>Agua:</strong> 90°C - 93°C</li>
+              </ul>
+            </article>
+
+            <!-- Method 6: Sifón Japonés -->
+            <article class="method-card">
+              <div class="method-icon-box">
+                <i class="fa-solid fa-fire"></i>
+              </div>
+              <h3 class="method-title">Sifón de Vacío</h3>
+              <span class="method-tag">Vacío / Infusión Teatral</span>
+              <p class="method-desc">
+                Combina inmersión y filtrado al vacío impulsado por calor. Produce tazas excepcionalmente aromáticas con claridad prístina.
+              </p>
+
+              <ul class="method-specs">
+                <li><i class="fa-solid fa-sliders"></i> <strong>Molienda:</strong> Media</li>
+                <li><i class="fa-solid fa-stopwatch"></i> <strong>Tiempo:</strong> 2:00 min</li>
+                <li><i class="fa-solid fa-scale-balanced"></i> <strong>Ratio Ideal:</strong> 1:15</li>
+                <li><i class="fa-solid fa-temperature-three-quarters"></i> <strong>Agua:</strong> 93°C</li>
+              </ul>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: PREPARACIÓN & CALCULADORA INTERACTIVA DE RATIO -->
+    <section class="section prep-section bg-alt" id="preparacion">
+      <div class="container">
+        
+        <header class="section-header text-center">
+          <span class="section-subtitle">Herramienta de Barismo</span>
+          <h2 class="section-title">Calculadora de Ratio & <span class="text-accent">Guía de Preparación</span></h2>
+          <p class="section-description">
+            Ingresa la cantidad de agua o el número de tazas para calcular la dosis exacta de café en gramos y seguir la guía paso a paso.
+          </p>
+        </header>
+
+        <div class="grid grid-2-cols prep-calculator-wrapper">
+
+          <!-- Interactive Calculator Panel -->
+          <div class="calc-panel">
+            <div class="calc-header">
+              <h3><i class="fa-solid fa-calculator text-accent"></i> Calculadora Barista</h3>
+              <p>Ajusta los parámetros para tu extracción perfecta</p>
+            </div>
+
+            <form id="ratio-calculator-form" class="calc-form">
+              
+              <div class="form-group">
+                <label for="calc-method"><i class="fa-solid fa-flask"></i> Método de Extracción:</label>
+                <select id="calc-method" class="form-control">
+                  <option value="v60">V60 (Ratio 1:15 - Taza Balanceada)</option>
+                  <option value="chemex">Chemex (Ratio 1:16 - Taza Limpia)</option>
+                  <option value="aeropress">AeroPress (Ratio 1:14 - Taza Intensa)</option>
+                  <option value="frenchpress">Prensa Francesa (Ratio 1:13 - Taza Intensa)</option>
+                  <option value="espresso">Espresso (Ratio 1:2 - Concentrado)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="calc-mode"><i class="fa-solid fa-sliders"></i> Calcular Por:</label>
+                <div class="radio-toggle">
+                  <label class="radio-label">
+                    <input type="radio" name="calc-mode-radio" value="water" checked> Volumen de Agua (mL)
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="calc-mode-radio" value="cups"> Número de Tazas
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group" id="water-input-group">
+                <label for="input-water">Volumen de Agua Total (mL):</label>
+                <input type="number" id="input-water" class="form-control" value="300" min="50" max="2000" step="10">
+              </div>
+
+              <div class="form-group hidden" id="cups-input-group">
+                <label for="input-cups">Número de Tazas (200mL c/u):</label>
+                <input type="number" id="input-cups" class="form-control" value="2" min="1" max="10" step="1">
+              </div>
+
+              <!-- Output Results Display -->
+              <div class="calc-results" id="calc-results-box">
+                <div class="result-card">
+                  <span class="result-title">Café Requerido</span>
+                  <span class="result-value" id="res-coffee">20.0 g</span>
+                  <small id="res-coffee-detail">Gramos pesados en báscula</small>
+                </div>
+
+                <div class="result-card">
+                  <span class="result-title">Agua Necesaria</span>
+                  <span class="result-value" id="res-water">300 mL</span>
+                  <small id="res-water-detail">Agua filtrada a 92°C</small>
+                </div>
+
+                <div class="result-card">
+                  <span class="result-title">Bloom / Pre-infusión</span>
+                  <span class="result-value" id="res-bloom">60 mL</span>
+                  <small id="res-bloom-detail">3x peso del café (45 seg)</small>
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Step-by-Step Brewing Protocol Card -->
+          <div class="prep-steps-panel">
+            <h3 class="steps-title"><i class="fa-solid fa-list-check text-accent"></i> Protocolo de Preparación</h3>
+            
+            <ol class="steps-list">
+              <li class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Molienda & Temperatura</h4>
+                  <p>Muele tus granos al grosor recomendado. Calienta agua filtrada a la temperatura óptima (90°C - 94°C).</p>
+                </div>
+              </li>
+
+              <li class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Purgado del Filtro</h4>
+                  <p>Coloca el filtro de papel en el método y enjuágalo con agua caliente para eliminar sabores a papel y precalentar el recipiente.</p>
+                </div>
+              </li>
+
+              <li class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Pre-infusión (Bloom)</h4>
+                  <p>Añade el café molido. Vierte lentamente <strong id="step-bloom-val">60 mL</strong> de agua en espiral desde el centro. Espera 45 segundos para liberar el CO2.</p>
+                </div>
+              </li>
+
+              <li class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Vertido Principal</h4>
+                  <p>Vierte el resto del agua en 2 o 3 vertidos continuos con movimientos circulares suaves sin tocar las paredes de papel.</p>
+                </div>
+              </li>
+
+              <li class="step-item">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                  <h4>Servir & Oxigenar</h4>
+                  <p>Una vez terminado el goteo, agita suavemente el servidor para homogeneizar el aroma y sirve en tu taza favorita.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: CONTACTO & UBICACIÓN -->
+    <section class="section contact-section" id="contacto">
+      <div class="container">
+        
+        <header class="section-header text-center">
+          <span class="section-subtitle">Visítanos & Escríbenos</span>
+          <h2 class="section-title">Estamos Listos para <span class="text-accent">Atenderte</span></h2>
+          <p class="section-description">
+            Visita nuestra barra de experiencia de cata o ponte en contacto para pedidos institucionales y talleres de barismo.
+          </p>
+        </header>
+
+        <div class="grid grid-2-cols contact-grid">
+          
+          <!-- Contact Info Column -->
+          <div class="contact-info-card">
+            <h3>Barra de Cata & Tostaduría</h3>
+            <p class="contact-intro">
+              Te esperamos en nuestro espacio diseñado para amantes del buen café.
+            </p>
+
+            <ul class="contact-details-list">
+              <li>
+                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <strong>Dirección:</strong>
+                  <p>Calle de la Innovación #104, Zona Gourmet</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                <div>
+                  <strong>Horario de Atención:</strong>
+                  <p>Lunes a Sábado: 7:00 AM – 8:00 PM<br>Domingos: 8:00 AM – 6:00 PM</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <strong>Correo Electrónico:</strong>
+                  <p>hola@auracafe.com / ventas@auracafe.com</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <strong>Teléfono / WhatsApp:</strong>
+                  <p>+57 300 890 1234</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="social-links-box">
+              <span>Síguenos en redes:</span>
+              <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Column -->
+          <div class="contact-form-card">
+            <h3>Envíanos un Mensaje</h3>
+            
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="contact-name">Nombre Completo *</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="Ej. Camila Morales" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Correo Electrónico *</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="camila@ejemplo.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Asunto</label>
+                <select id="contact-subject" class="form-control">
+                  <option value="granos">Compra de Granos de Origen</option>
+                  <option value="taller">Taller de Barismo / Extracción</option>
+                  <option value="empresa">Suministro para Empresa / Cafetería</option>
+                  <option value="otro">Consulta General</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Mensaje *</label>
+                <textarea id="contact-message" class="form-control" rows="4" placeholder="¿En qué te podemos ayudar?" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-col footer-brand">
+        <a href="#inicio" class="logo">
+          <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
+          <span class="logo-text">AURA <span class="logo-accent">CAFÉ</span></span>
+        </a>
+        <p class="footer-desc">
+          Tostaduría artesanal y laboratorio de café de especialidad. Apasionados por la calidad en cada gota.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Navegación</h4>
+        <ul class="footer-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#acerca">Acerca de Nosotros</a></li>
+          <li><a href="#cafes">Nuestros Cafés</a></li>
+          <li><a href="#metodos">Métodos de Extracción</a></li>
+          <li><a href="#preparacion">Guía de Preparación</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Especialidades</h4>
+        <ul class="footer-links">
+          <li><a href="#cafes">Geisha Panamá</a></li>
+          <li><a href="#cafes">Bourbon Rosa Colombia</a></li>
+          <li><a href="#cafes">Etiopía Yirgacheffe</a></li>
+          <li><a href="#metodos">Extracción V60 & Chemex</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Boletín Cafetero</h4>
+        <p class="footer-desc">Recibe consejos de barismo y notificaciones de nuevos lotes de tueste.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('¡Gracias por suscribirte a nuestro boletín!');">
+          <input type="email" placeholder="Tu correo electrónico" class="newsletter-input" required>
+          <button type="submit" class="btn btn-accent btn-icon" aria-label="Suscribirse">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>&copy; 2026 Aura Café - Café de Especialidad. Todos los derechos reservados.</p>
+        <p class="footer-credits">Diseñado con HTML5 Semántico & CSS3 Externo puro.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COFFEE DETAIL MODAL -->
+  <div class="modal-backdrop hidden" id="coffee-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" onclick="closeCoffeeModal()">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge"><i class="fa-solid fa-award"></i> Ficha Técnica Q-Grader</span>
+        <h3 id="modal-title">Café de Especialidad</h3>
+      </div>
+      <div class="modal-body">
+        <p id="modal-desc">Detalles completos del grano, proceso de cosecha y recomendación de curva de tueste.</p>
+        <div class="modal-info-grid">
+          <div class="modal-info-item">
+            <strong>Puntaje SCA:</strong>
+            <span id="modal-sca">88+ pts</span>
+          </div>
+          <div class="modal-info-item">
+            <strong>Recomendación:</strong>
+            <span>V60 / AeroPress</span>
+          </div>
+          <div class="modal-info-item">
+            <strong>Tueste:</strong>
+            <span>Medio Claro</span>
+          </div>
+          <div class="modal-info-item">
+            <strong>Precio:</strong>
+            <span id="modal-price" class="text-accent">$22.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="closeCoffeeModal(); showToast('Añadido a tu pedido ficticio');">
+          <i class="fa-solid fa-cart-shopping"></i> Añadir a Pedido
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- External JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
