@@ -3,64 +3,377 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aura Café | Inicio</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>JS DOM Essentials - Guía de Ejercicios</title>
+  <meta name="description" content="Ejercicios prácticos de manipulación del DOM con HTML, CSS y JavaScript Vanilla.">
+  <!-- Google Fonts: Plus Jakarta Sans for UI, JetBrains Mono for Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- HEADER / NAVEGACIÓN -->
-  <header>
-    <div class="container nav-container">
-      <a href="index.html" class="logo">☕ Aura Café</a>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="acerca.html">Acerca de</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-tag">JS DOM ESSENTIALS</div>
+      <h1>Manipulación del DOM en JavaScript</h1>
+      <p>Módulos de práctica interactivos con código fuente documentado.</p>
+      
+      <nav class="nav-tabs" aria-label="Filtro de actividades">
+        <button class="nav-btn active" data-tab="todos">Todos los retos</button>
+        <button class="nav-btn" data-tab="basico">Nivel Básico</button>
+        <button class="nav-btn" data-tab="pro">Nivel Pro</button>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-content">
-        <h1>Café de Especialidad</h1>
-        <p>Granos de origen único, tostados artesanalmente y preparados con pasión.</p>
-        <a href="acerca.html" class="btn">Conoce nuestros cafés</a>
-      </div>
-    </section>
+    <!-- Main Grid -->
+    <main class="exercises-grid">
 
-    <!-- DESTACADOS -->
-    <section class="section">
-      <div class="container text-center">
-        <h2>¿Qué nos hace especiales?</h2>
-        <div class="grid grid-3">
-          <article class="card">
-            <h3>🌱 Granos Seleccionados</h3>
-            <p>Trabajamos directamente con pequeñas fincas en Colombia, Etiopía y Panamá.</p>
-          </article>
-          <article class="card">
-            <h3>🔥 Tueste Artesanal</h3>
-            <p>Tostamos en pequeñas tandas para resaltar las notas naturales del grano.</p>
-          </article>
-          <article class="card">
-            <h3>⚡ Métodos de Extracción</h3>
-            <p>Preparamos cada taza con técnicas como V60, Chemex y Prensa Francesa.</p>
-          </article>
+      <!-- EJERCICIO 1 -->
+      <section class="exercise-card" data-category="basico" id="ejercicio-1">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="level-tag basico">Ejercicio 01</span>
+            <span class="badge-subtle">Nivel Básico</span>
+          </div>
+          <h2>Cambiar color de fondo</h2>
+          <p>Alterna dinámicamente el fondo de un contenedor mediante eventos de clic.</p>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <!-- PIE DE PÁGINA -->
-  <footer>
-    <div class="container text-center">
-      <p>&copy; 2026 Aura Café - Todos los derechos reservados.</p>
-    </div>
-  </footer>
+        <div class="card-body">
+          <div class="demo-box" id="demo-box-1">
+            <div class="color-display-info">
+              <span>Color actual:</span>
+              <strong id="color-code">#18181b</strong>
+            </div>
+            <button id="btn-change-color" class="action-btn primary-btn">
+              Cambiar color
+            </button>
+          </div>
 
+          <details class="code-details">
+            <summary>Ver código fuente</summary>
+            <div class="code-tabs-wrapper">
+              <div class="code-tab-header">
+                <button class="tab-link active" onclick="switchCodeTab(event, 'ex1-html')">HTML</button>
+                <button class="tab-link" onclick="switchCodeTab(event, 'ex1-css')">CSS</button>
+                <button class="tab-link" onclick="switchCodeTab(event, 'ex1-js')">JS</button>
+              </div>
+
+              <div id="ex1-html" class="code-content active">
+                <pre><code>&lt;!-- HTML --&gt;
+&lt;div id="contenedor"&gt;
+  &lt;p&gt;Color: &lt;span id="codigoColor"&gt;#18181b&lt;/span&gt;&lt;/p&gt;
+  &lt;button id="btnCambiar"&gt;Cambiar color&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+
+              <div id="ex1-css" class="code-content">
+                <pre><code>/* CSS */
+#contenedor {
+  padding: 2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+#btnCambiar {
+  padding: 10px 18px;
+  font-weight: 500;
+  cursor: pointer;
+}</code></pre>
+              </div>
+
+              <div id="ex1-js" class="code-content">
+                <pre><code>// JavaScript
+const btnCambiar = document.getElementById('btnCambiar');
+const contenedor = document.getElementById('contenedor');
+const codigoColor = document.getElementById('codigoColor');
+
+const colores = ['#27272a', '#1e293b', '#14532d', '#1e3a8a', '#581c87', '#701a75'];
+
+btnCambiar.addEventListener('click', function() {
+  const indiceAleatorio = Math.floor(Math.random() * colores.length);
+  const nuevoColor = colores[indiceAleatorio];
+
+  contenedor.style.backgroundColor = nuevoColor;
+  codigoColor.textContent = nuevoColor;
+});</code></pre>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- EJERCICIO 2 -->
+      <section class="exercise-card" data-category="basico" id="ejercicio-2">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="level-tag basico">Ejercicio 02</span>
+            <span class="badge-subtle">Nivel Básico</span>
+          </div>
+          <h2>Lista dinámica en memoria</h2>
+          <p>Almacena datos en un arreglo de JavaScript y renderiza la lista en el DOM.</p>
+        </div>
+
+        <div class="card-body">
+          <div class="demo-box demo-list-box">
+            <form id="form-lista" class="input-group">
+              <input type="text" id="input-item" placeholder="Escribe un elemento..." autocomplete="off" required>
+              <button type="submit" class="action-btn primary-btn">Agregar</button>
+            </form>
+
+            <div class="list-status">
+              <span>Elementos en arreglo: <strong id="list-count">0</strong></span>
+              <button type="button" id="btn-clear-list" class="text-btn">Vaciar todo</button>
+            </div>
+
+            <ul id="lista-elementos" class="dynamic-list">
+              <li class="empty-msg">Sin elementos en memoria</li>
+            </ul>
+          </div>
+
+          <details class="code-details">
+            <summary>Ver código fuente</summary>
+            <div class="code-tabs-wrapper">
+              <div class="code-tab-header">
+                <button class="tab-link active" onclick="switchCodeTab(event, 'ex2-html')">HTML</button>
+                <button class="tab-link" onclick="switchCodeTab(event, 'ex2-css')">CSS</button>
+                <button class="tab-link" onclick="switchCodeTab(event, 'ex2-js')">JS</button>
+              </div>
+
+              <div id="ex2-html" class="code-content active">
+                <pre><code>&lt;!-- HTML --&gt;
+&lt;input type="text" id="inputTexto" placeholder="Ingresa texto"&gt;
+&lt;button id="btnAgregar"&gt;Agregar&lt;/button&gt;
+&lt;ul id="miLista"&gt;&lt;/ul&gt;</code></pre>
+              </div>
+
+              <div id="ex2-css" class="code-content">
+                <pre><code>/* CSS */
+.dynamic-list { list-style: none; padding: 0; }
+.dynamic-list li {
+  background: #18181b;
+  border: 1px solid #27272a;
+  padding: 8px 12px;
+  border-radius: 6px;
+}</code></pre>
+              </div>
+
+              <div id="ex2-js" class="code-content">
+                <pre><code>// JavaScript (Arreglos + DOM)
+const datosEnMemoria = [];
+
+function renderizarLista() {
+  const lista = document.getElementById('miLista');
+  lista.innerHTML = '';
+
+  datosEnMemoria.forEach((item, index) => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    
+    const btnEliminar = document.createElement('button');
+    btnEliminar.textContent = 'Eliminar';
+    btnEliminar.onclick = () => {
+      datosEnMemoria.splice(index, 1);
+      renderizarLista();
+    };
+    
+    li.appendChild(btnEliminar);
+    lista.appendChild(li);
+  });
+}</code></pre>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- EJERCICIO 3 -->
+      <section class="exercise-card" data-category="pro" id="ejercicio-3">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="level-tag pro">Ejercicio 03</span>
+            <span class="badge-subtle">Nivel Pro</span>
+          </div>
+          <h2>Contador con límite</h2>
+          <p>Incrementa valores y dispara un aviso del sistema al alcanzar 10.</p>
+        </div>
+
+        <div class="card-body">
+          <div class="demo-box demo-counter-box">
+            <div id="alert-banner" class="alert-box hidden" role="alert">
+              <span class="alert-indicator"></span>
+              <div>
+                <strong>Límite alcanzado (10)</strong>
+                <p>Se ha cumplido la condición del contador.</p>
+              </div>
+            </div>
+
+            <div class="counter-controls">
+              <button id="btn-decrement" class="counter-btn" aria-label="Decrementar">-</button>
+              <div class="counter-display-wrapper">
+                <span id="counter-value" class="counter-number">0</span>
+              </div>
+              <button id="btn-increment" class="counter-btn" aria-label="Incrementar">+</button>
+            </div>
+
+            <div class="counter-footer">
+              <button id="btn-reset-counter" class="text-btn">Restablecer a 0</button>
+            </div>
+          </div>
+
+          <details class="code-details">
+            <summary>Ver código fuente</summary>
+            <div class="code-tabs-wrapper">
+              <div class="code-tab-header">
+                <button class="tab-link active" onclick="switchCodeTab(event, 'ex3-html')">HTML</button>
+                <button class="tab-link" onclick="switchCodeTab(event, 'ex3-css')">CSS</button>
+                <button class="tab-link" onclick="switchCodeTab(event, 'ex3-js')">JS</button>
+              </div>
+
+              <div id="ex3-html" class="code-content active">
+                <pre><code>&lt;!-- HTML --&gt;
+&lt;button id="btnRestar"&gt;-&lt;/button&gt;
+&lt;span id="valorContador"&gt;0&lt;/span&gt;
+&lt;button id="btnSumar"&gt;+&lt;/button&gt;
+&lt;div id="mensajeAlerta" style="display:none;"&gt;Límite alcanzado&lt;/div&gt;</code></pre>
+              </div>
+
+              <div id="ex3-css" class="code-content">
+                <pre><code>/* CSS */
+.counter-number {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.alert-box {
+  border-left: 3px solid #f59e0b;
+}</code></pre>
+              </div>
+
+              <div id="ex3-js" class="code-content">
+                <pre><code>// JavaScript (Eventos y Condicionales)
+let contador = 0;
+
+function actualizarUI() {
+  document.getElementById('valorContador').textContent = contador;
+  
+  if (contador === 10) {
+    alert('Atención: El contador ha alcanzado el límite de 10.');
+  }
+}
+
+document.getElementById('btnSumar').onclick = () => { contador++; actualizarUI(); };
+document.getElementById('btnRestar').onclick = () => { contador--; actualizarUI(); };</code></pre>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- EJERCICIO 4 -->
+      <section class="exercise-card" data-category="pro" id="ejercicio-4">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="level-tag pro">Ejercicio 04</span>
+            <span class="badge-subtle">Reto Final Pro</span>
+          </div>
+          <h2>Calculadora manual (Sin <code>eval</code>)</h2>
+          <p>Procesador aritmético construido con arreglos, condicionales y evaluación manual.</p>
+        </div>
+
+        <div class="card-body">
+          <div class="demo-box demo-calc-box">
+            <div class="calculator-container">
+              <div class="calc-screen">
+                <div id="calc-history" class="calc-history"></div>
+                <div id="calc-display" class="calc-display-main">0</div>
+              </div>
+
+              <div class="calc-grid">
+                <button class="calc-btn action" data-action="clear">C</button>
+                <button class="calc-btn action" data-action="backspace">⌫</button>
+                <button class="calc-btn operator" data-op="%">%</button>
+                <button class="calc-btn operator" data-op="÷">÷</button>
+
+                <button class="calc-btn number" data-num="7">7</button>
+                <button class="calc-btn number" data-num="8">8</button>
+                <button class="calc-btn number" data-num="9">9</button>
+                <button class="calc-btn operator" data-op="*">×</button>
+
+                <button class="calc-btn number" data-num="4">4</button>
+                <button class="calc-btn number" data-num="5">5</button>
+                <button class="calc-btn number" data-num="6">6</button>
+                <button class="calc-btn operator" data-op="-">-</button>
+
+                <button class="calc-btn number" data-num="1">1</button>
+                <button class="calc-btn number" data-num="2">2</button>
+                <button class="calc-btn number" data-num="3">3</button>
+                <button class="calc-btn operator" data-op="+">+</button>
+
+                <button class="calc-btn number zero" data-num="0">0</button>
+                <button class="calc-btn number" data-num=".">.</button>
+                <button class="calc-btn equals" data-action="equals">=</button>
+              </div>
+            </div>
+          </div>
+
+          <details class="code-details">
+            <summary>Ver código fuente</summary>
+            <div class="code-tabs-wrapper">
+              <div class="code-tab-header">
+                <button class="tab-link active" onclick="switchCodeTab(event, 'ex4-html')">HTML</button>
+                <button class="tab-link" onclick="switchCodeTab(event, 'ex4-css')">CSS</button>
+                <button class="tab-link" onclick="switchCodeTab(event, 'ex4-js')">JS (Sin eval)</button>
+              </div>
+
+              <div id="ex4-html" class="code-content active">
+                <pre><code>&lt;!-- HTML --&gt;
+&lt;div class="pantalla" id="pantalla"&gt;0&lt;/div&gt;
+&lt;div class="calc-grid"&gt;
+  &lt;button onclick="limpiar()"&gt;C&lt;/button&gt;
+  &lt;button onclick="operar('/')"&gt;÷&lt;/button&gt;
+  &lt;!-- Botones 0-9 y operadores --&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+
+              <div id="ex4-css" class="code-content">
+                <pre><code>/* CSS Grid Calculadora */
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}</code></pre>
+              </div>
+
+              <div id="ex4-js" class="code-content">
+                <pre><code>// Función de evaluación manual (Sin eval)
+function calcular(a, operador, b) {
+  const numA = parseFloat(a);
+  const numB = parseFloat(b);
+  if (isNaN(numA) || isNaN(numB)) return b;
+
+  switch (operador) {
+    case '+': return numA + numB;
+    case '-': return numA - numB;
+    case '*': case '×': return numA * numB;
+    case '/': case '÷': return numB !== 0 ? numA / numB : 'Error';
+    case '%': return numA % numB;
+    default: return numB;
+  }
+}</code></pre>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>JS DOM Essentials — Desarrollo Frontend Vanilla</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>

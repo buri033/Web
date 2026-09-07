@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  background-color: #09090b;
+  color: #f4f4f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.card {
+  background-color: #141417;
+  border: 1px solid #27272a;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 0.85rem;
+  color: #a1a1aa;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.input-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.25rem;
+}
+
+input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #27272a;
+  background-color: #09090b;
+  color: #fafafa;
+  font-family: inherit;
+  font-size: 0.875rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: #3f3f46;
+}
+
+button {
+  background-color: #27272a;
+  color: #fafafa;
+  border: 1px solid #3f3f46;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #3f3f46;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: #09090b;
+  border: 1px solid #27272a;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.btn-eliminar {
+  background: transparent;
+  border: none;
+  color: #71717a;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+.btn-eliminar:hover {
+  color: #ef4444;
+  background: transparent;
+}

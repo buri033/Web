@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap');
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  background-color: #09090b;
+  color: #f4f4f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.calculadora {
+  background-color: #141417;
+  border: 1px solid #27272a;
+  padding: 16px;
+  border-radius: 12px;
+  width: 280px;
+}
+
+.banner-no-eval {
+  background-color: #1c1c20;
+  border: 1px solid #27272a;
+  color: #a1a1aa;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.pantalla {
+  background-color: #09090b;
+  border: 1px solid #27272a;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  text-align: right;
+  margin-bottom: 12px;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 32px;
+}
+
+.grid-botones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.btn {
+  padding: 12px 0;
+  font-size: 0.95rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  border: 1px solid #27272a;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #09090b;
+  color: #fafafa;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background-color: #1c1c20;
+}
+
+.btn.operacion {
+  background-color: #1c1c20;
+  color: #a1a1aa;
+}
+
+.btn.igual {
+  background-color: #fafafa;
+  color: #09090b;
+  border-color: #fafafa;
+  font-weight: 600;
+}
+
+.btn.igual:hover {
+  background-color: #e4e4e7;
+}
+
+.btn.cero {
+  grid-column: span 2;
+}
