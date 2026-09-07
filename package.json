@@ -1,0 +1,25 @@
+{
+  "name": "ejercicios-typescript",
+  "version": "1.0.0",
+  "description": "Solución de los 12 ejercicios en TypeScript",
+  "main": "ejercicio1.ts",
+  "scripts": {
+    "start": "tsx ejercicio1.ts",
+    "ejercicio1": "tsx ejercicio1.ts",
+    "ejercicio2": "tsx ejercicio2.ts",
+    "ejercicio3": "tsx ejercicio3.ts",
+    "ejercicio4": "tsx ejercicio4.ts",
+    "ejercicio5": "tsx ejercicio5.ts",
+    "ejercicio6": "tsx ejercicio6.ts",
+    "ejercicio7": "tsx ejercicio7.ts",
+    "ejercicio8": "tsx ejercicio8.ts",
+    "ejercicio9": "tsx ejercicio9.ts",
+    "ejercicio10": "tsx ejercicio10.ts",
+    "ejercicio11": "tsx ejercicio11.ts",
+    "ejercicio12": "tsx ejercicio12.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "tsx": "^4.0.0"
+  }
+}
